@@ -7,20 +7,13 @@ import {
   getFilter,
   getIsLoading,
 } from 'redux/selectors';
-import { useEffect } from 'react';
-import { fetchContacts } from 'redux/contactsOperation';
+
 
 const ContactList = () => {
   const filter = useSelector(getFilter);
   const contacts = useSelector(getContacts);
   const error = useSelector(getError);
   const isLoading = useSelector(getIsLoading);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
 
   const visibleContacts = () => {
     const filterNormalized = filter.toLowerCase();

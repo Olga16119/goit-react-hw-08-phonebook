@@ -16,4 +16,9 @@ const deleteContacts = async contactId => {
   return data;
 };
 
-export { fetchAllContacts, addNewContact, deleteContacts };
+const updateContact = async ({ id, number, name }) => {
+    const { data } = await axios.get(`/contacts/${id}`, { name, number })
+    return data;
+}
+
+export { fetchAllContacts, addNewContact, deleteContacts, updateContact };
