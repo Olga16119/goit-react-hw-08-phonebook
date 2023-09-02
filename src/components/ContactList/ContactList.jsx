@@ -1,6 +1,6 @@
 import ContactItem from 'components/ContactItem/ContactItem';
 import css from './ContactList.module.css';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 import {
   getContacts,
   getError,
