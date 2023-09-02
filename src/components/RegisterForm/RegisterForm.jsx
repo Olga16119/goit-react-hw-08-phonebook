@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/Auth/authOperations';
+import css from './RegisterForm.module.css';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const RegisterForm = () => {
       name: form.name.value,
       emeail: form.email.value,
       password: form.password.value,
-    }
+    };
     try {
       dispatch(register(user));
       navigate('/');
@@ -24,20 +25,22 @@ const RegisterForm = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={css.form}>
         <label>
-          Name
           <input type="text" name="name" />
+          Name
         </label>
         <label>
-          Email
           <input type="email" name="email" />
+          Email{' '}
         </label>
         <label>
-          Password
           <input type="password" name="password" />
+          Password
         </label>
-        <button type="submit">Singup</button>
+        <button className={css.singupBtn} type="submit">
+          Singup
+        </button>
       </form>
     </div>
   );

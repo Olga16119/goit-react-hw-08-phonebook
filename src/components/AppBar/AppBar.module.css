@@ -1,26 +1,26 @@
-.navigation {
+.header{
+  height: 30px;
   display: flex;
   align-items: center;
-  gap: 15px;
-  text-decoration: none;
-  font-size: 16px;
-  margin-top: 15px;
+  justify-content: space-between;
+
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px;
   border-bottom: 1px solid black;
+  background-color: rgb(210, 240, 233);
 }
 
-.active {
-  color: red;
-}
-
-.userMenu {
+.authNav{
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 15px;
-  margin-left: auto;
+  font-size: 16px;
 }
 
-.userBtn {
-  width: 90px;
-  height: 35px;
+.navLink:active,
+.nvLink:focus,
+.navLink:hover{
+    color: darkolivegreen;
+
 }
+

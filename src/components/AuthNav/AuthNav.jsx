@@ -1,12 +1,13 @@
-const { NavLink } = require('react-router-dom');
+import css from '../AppBar/AppBar.module.css'
+import { NavLink } from 'react-router-dom';
 
 const AuthNav = () => {
   return (
-    <div>
-      <NavLink to="/register">REGISTER</NavLink>
-      <NavLink to="/login">LOGIN</NavLink>
+    <div className={css.authNav}>
+      <NavLink to="/register" className={css.navLink}>REGISTER</NavLink>
+      <NavLink to="/login" className={css.navLink}>LOGIN</NavLink>
     </div>
   );
 };
 
-export default AuthNav
+export default AuthNav;

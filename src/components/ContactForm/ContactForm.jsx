@@ -35,11 +35,10 @@ const ContactForm = () => {
       contacts.find(contact => contact.number === number)
     ) {
       return alert(` ${name} already is in phonebook`);
-      }
-      const newContact={name, number}
+    }
+    const newContact = { name, number };
     dispatch(addContact(newContact));
     resetForm();
-
   };
 
   const resetForm = () => {

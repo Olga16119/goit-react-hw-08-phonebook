@@ -13,7 +13,6 @@ const ContactItem = ({ id, name, number }) => {
   );
 };
 
-
 ContactItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

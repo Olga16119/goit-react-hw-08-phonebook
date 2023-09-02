@@ -33,7 +33,6 @@ const App = () => {
             <PublicRoute
               redirectTo="/contacts"
               component={<Register />}
-              restricted
             />
           }
         />
@@ -43,7 +42,6 @@ const App = () => {
             <PublicRoute
               redirectTo="/contacts"
               component={<Login />}
-              restricted
             />
           }
         />

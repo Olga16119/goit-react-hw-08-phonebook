@@ -1,0 +1,16 @@
+.home {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.login {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}

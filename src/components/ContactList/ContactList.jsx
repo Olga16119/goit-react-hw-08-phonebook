@@ -1,13 +1,12 @@
 import ContactItem from 'components/ContactItem/ContactItem';
 import css from './ContactList.module.css';
-import {  useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
   getContacts,
   getError,
   getFilter,
   getIsLoading,
 } from 'redux/selectors';
-
 
 const ContactList = () => {
   const filter = useSelector(getFilter);
