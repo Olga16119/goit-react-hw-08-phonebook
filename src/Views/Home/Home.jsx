@@ -15,6 +15,7 @@ const Home = () => {
       <button type="button" onClick={startButton}>
         START
       </button>
+      
     </div>
   );
 };
