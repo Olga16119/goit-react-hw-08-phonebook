@@ -12,7 +12,7 @@ const RegisterForm = () => {
     const form = event.currentTarget.elements;
     const user = {
       name: form.name.value,
-      emeail: form.email.value,
+      email: form.email.value,
       password: form.password.value,
     };
     try {

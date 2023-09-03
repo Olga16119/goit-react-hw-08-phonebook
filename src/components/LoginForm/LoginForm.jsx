@@ -1,19 +1,26 @@
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/Auth/authOperations';
 import css from './LoginForm.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
+  const navigate=useNavigate()
 
   const handleSubmit = event => {
     event.preventDefault();
 
     const form = event.currentTarget.elements;
     const user = {
-      emeail: form.email.value,
+      email: form.email.value,
       password: form.password.value,
     };
-    dispatch(login(user));
+    try {
+      dispatch(login(user));
+      navigate('/contacts')
+    } catch (error) {
+      console.log(error.message)
+    }
   };
 
   return (
@@ -26,7 +33,7 @@ const LoginForm = () => {
         <input type="password" name="password" />
         Password
       </label>
-      <button className={css.loginBtn} type="submit" onClick={handleSubmit}>
+      <button className={css.loginBtn} type="submit">
         Login
       </button>
     </form>
@@ -34,3 +41,4 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
