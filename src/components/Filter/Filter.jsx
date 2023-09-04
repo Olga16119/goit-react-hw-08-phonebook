@@ -12,14 +12,14 @@ const Filter = () => {
 
   return (
     <label>
-      Find contacts
       <input
         type="text"
         name="filter"
         value={filter}
         onChange={filterChange}
         placeholder="Enter name four search"
-      />
+      />{' '}
+      Find contacts
     </label>
   );
 };

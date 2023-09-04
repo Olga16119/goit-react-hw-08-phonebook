@@ -70,7 +70,7 @@ const ContactForm = () => {
         onChange={onChangeForm}
         id={nanoid()}
       />
-      <button>Add Contact</button>
+      <button>Add</button>
     </form>
   );
 };

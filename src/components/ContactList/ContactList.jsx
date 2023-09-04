@@ -26,8 +26,8 @@ const ContactList = () => {
     <>
       {!isLoading && !error}
       <ul className={css.contactList}>
-        {visibleContacts().map(({ id, name, phone }) => (
-          <ContactItem key={id} id={id} name={name} number={phone} />
+        {visibleContacts().map(({ id, name, number }) => (
+          <ContactItem key={id} id={id} name={name} number={number} />
         ))}
       </ul>
     </>

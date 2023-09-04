@@ -6,6 +6,7 @@ import Loader from 'components/Loader/Loader';
 import Filter from 'components/Filter/Filter';
 import ContactList from 'components/ContactList/ContactList';
 import ContactForm from 'components/ContactForm/ContactForm';
+import css from '../Views.module.css';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -16,13 +17,13 @@ const Contacts = () => {
   }, [dispatch]);
 
   return (
-    <>
-      <h1>CONTACTS</h1>
+    <div className={css.contactsPage}>
+      <h2>YOUR CONTACTS</h2>
       <ContactForm />
       <Filter />
       <ContactList />
       {isLoading && <Loader />}
-    </>
+    </div>
   );
 };
 

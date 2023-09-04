@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getToken } from 'redux/selectors';
-import css from '../Views.module.css'
+import css from '../Views.module.css';
 
 const Home = () => {
   const isToken = useSelector(getToken);
@@ -15,7 +15,6 @@ const Home = () => {
       <button type="button" onClick={startButton}>
         START
       </button>
-      
     </div>
   );
 };

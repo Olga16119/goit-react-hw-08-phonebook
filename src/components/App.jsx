@@ -30,20 +30,12 @@ const App = () => {
         <Route
           path="/register"
           element={
-            <PublicRoute
-              redirectTo="/contacts"
-              component={<Register />}
-            />
+            <PublicRoute redirectTo="/contacts" component={<Register />} />
           }
         />
         <Route
           path="/login"
-          element={
-            <PublicRoute
-              redirectTo="/contacts"
-              component={<Login />}
-            />
-          }
+          element={<PublicRoute redirectTo="/login" component={<Login />} />}
         />
         <Route
           path="/contacts"

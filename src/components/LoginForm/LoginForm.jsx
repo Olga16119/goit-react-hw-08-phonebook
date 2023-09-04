@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -17,9 +17,9 @@ const LoginForm = () => {
     };
     try {
       dispatch(login(user));
-      navigate('/contacts')
+      navigate('/contacts');
     } catch (error) {
-      console.log(error.message)
+      console.log(error.message);
     }
   };
 
@@ -41,4 +41,3 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
-

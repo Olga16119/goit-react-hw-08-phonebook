@@ -1,4 +1,4 @@
-.header{
+.header {
   height: 30px;
   display: flex;
   align-items: center;
@@ -11,7 +11,7 @@
   background-color: rgb(210, 240, 233);
 }
 
-.authNav{
+.authNav {
   display: flex;
   gap: 15px;
   font-size: 16px;
@@ -19,8 +19,13 @@
 
 .navLink:active,
 .nvLink:focus,
-.navLink:hover{
-    color: darkolivegreen;
-
+.navLink:hover {
+  color: darkolivegreen;
 }
 
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+}
