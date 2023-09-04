@@ -1,30 +1,27 @@
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/Auth/authOperations';
 import css from './LoginForm.module.css';
-import { useNavigate } from 'react-router-dom';
+import PublicRoute from 'components/PrivateRoute/PrivateRoute';
+import Login from 'Views/Login/Login';
+import { ToastContainer} from 'react-toastify';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleSubmit = event => {
     event.preventDefault();
-
     const form = event.currentTarget.elements;
     const user = {
       email: form.email.value,
       password: form.password.value,
     };
-    try {
-      dispatch(login(user));
-      navigate('/contacts');
-    } catch (error) {
-      console.log(error.message);
-    }
+
+    dispatch(login(user));
+    <PublicRoute redirectTo="/contacts" component={<Login />} />;
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
+    <form className={css.form} onSubmit={handleSubmit} autoComplete="on">
       <label>
         <input type="email" name="email" />
         Email
@@ -36,6 +33,7 @@ const LoginForm = () => {
       <button className={css.loginBtn} type="submit">
         Login
       </button>
+      <ToastContainer />
     </form>
   );
 };

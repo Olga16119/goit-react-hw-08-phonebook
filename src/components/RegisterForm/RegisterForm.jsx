@@ -1,11 +1,12 @@
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/Auth/authOperations';
 import css from './RegisterForm.module.css';
+import PublicRoute from 'components/PublicRoute/PublicRoute';
+import Register from 'Views/Register/Register';
+import { ToastContainer } from 'react-toastify';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -15,12 +16,9 @@ const RegisterForm = () => {
       email: form.email.value,
       password: form.password.value,
     };
-    try {
-      dispatch(register(user));
-      navigate('/');
-    } catch (error) {
-      console.log(error.message);
-    }
+
+    dispatch(register(user));
+    <PublicRoute redirectTo="/contacts" component={<Register />} />;
   };
 
   return (
@@ -41,6 +39,7 @@ const RegisterForm = () => {
         <button className={css.singupBtn} type="submit">
           Singup
         </button>
+        <ToastContainer />
       </form>
     </div>
   );
