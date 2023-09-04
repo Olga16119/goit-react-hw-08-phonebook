@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getIsLoading } from 'redux/selectors';
-import { fetchAllContacts } from 'contacts_api/fetchContacts';
+import { fetchContacts } from 'redux/Contacts/contactsOperation';
 import Loader from 'components/Loader/Loader';
 import Filter from 'components/Filter/Filter';
 import ContactList from 'components/ContactList/ContactList';
@@ -12,7 +12,7 @@ const Contacts = () => {
   const isLoading = useSelector(getIsLoading);
 
   useEffect(() => {
-    dispatch(fetchAllContacts());
+    dispatch(fetchContacts());
   }, [dispatch]);
 
   return (

@@ -8,7 +8,7 @@ export const getError = state => state.contacts.error;
 
 export const getIsLoggedIn = state => state.auth.isLoggedIn;
 
-export const getUserName = state => state.user.name;
+export const getUserName = state => state.auth.user.name;
 
 export const getLoading = state => state.auth.isLoading;
 
