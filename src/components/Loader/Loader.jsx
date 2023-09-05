@@ -5,7 +5,7 @@ const Loader = () => {
     <RevolvingDot
       height="100"
       width="100"
-      radius="6"
+      radius="8"
       color="#4fa94d"
       secondaryColor=""
       ariaLabel="revolving-dot-loading"

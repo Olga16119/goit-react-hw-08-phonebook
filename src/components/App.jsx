@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useEffect, lazy } from 'react';
-import { fetchCurrentUser } from 'redux/Auth/authOperations';
+import { refreshUser } from 'redux/Auth/authOperations';
 import { getIsRefreshing } from 'redux/selectors';
 import Loader from './Loader/Loader';
 import { useSelector } from 'react-redux';
@@ -19,7 +19,7 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCurrentUser());
+    dispatch(refreshUser());
   }, [dispatch]);
   return isRefreshing ? (
     <Loader />
